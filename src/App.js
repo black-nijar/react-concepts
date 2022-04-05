@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import Call from "./Call";
+import { Closure } from "./closure";
+import Hoisting from "./Hoisting";
+import Objects from "./Objects";
+import Spread from "./Spread";
 
-function App() {
+const OptimizeComp = lazy(() => import("./Lazy"));
+const App = () => {
+  // console.log("1");
+  // setTimeout(() => {
+  //   console.log("2");
+  // }, 0);
+  // console.log("3");
+
+  const testDec = async () => {
+    // console.log("0");
+    // await timed;
+    // console.log("3");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <OptimizeComp /> */}
+      {/* {testDec()} */}
+      {/* <Call /> */}
+      {/* <Closure /> */}
+      {/* <Hoisting /> */}
+      {/* <Objects /> */}
+      <Spread />
     </div>
   );
-}
+};
 
 export default App;
