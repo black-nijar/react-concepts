@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import Call from "./Call";
 import { Closure } from "./closure";
 import Hoisting from "./Hoisting";
+import IndexedDB from "./indexeddb";
 import Objects from "./Objects";
 import Spread from "./Spread";
 
@@ -26,7 +27,8 @@ const App = () => {
       {/* <Closure /> */}
       {/* <Hoisting /> */}
       {/* <Objects /> */}
-      <Spread />
+      {/* <Spread /> */}
+      <IndexedDB />
     </div>
   );
 };
